@@ -1,21 +1,18 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { selectDay } from './../actions';
 import DayForecast from './DayForecast';
-
-function onClick(dispatch, selectedDay) {
-	dispatch({ type: 'CHANGE_FORECAST_DAY', day: selectedDay });
-}
 
 function getDayMenu(forecastDays, selectedDay, dispatch) {
 	return forecastDays.map(day => {
 
 		const baseClasses = ['btn', 'btn-default'];
 		if (day === selectedDay) {
-			baseClasses.push('active')
+			baseClasses.push('active');
 		}
 		const classes = classNames(baseClasses);
-		return <a key={day} onClick={() => onClick(dispatch, day)} className={classes} role='button'>{day}</a>
+		return <a key={day} onClick={() => dispatch(selectDay(day))} className={classes} role='button'>{day}</a>;
 	});
 }
 
@@ -35,4 +32,4 @@ export default (props) => {
 			</div>
 		</div>
 	);
-}
+};

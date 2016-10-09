@@ -17,13 +17,15 @@ class WeatherApp extends React.Component {
 	}
 
 	fetchForecast(props) {
-		if (!props.weather.forecast) {
-			this.props.actions.getForecast('London');
+		if (!props.weather.loaded) {
+			this.props.actions.fetchForecast('London');
 		}
 	}
 
 	getFiveDayForecast() {
-		return this.props.weather.updating ? <div>Fetching Weather...</div> : <FiveDayForecast weather={this.props.weather} dispatch={this.props.dispatch}/>;
+		return this.props.weather.loaded ?
+			<FiveDayForecast weather={this.props.weather} dispatch={this.props.dispatch}/> :
+			<div>Fetching Weather...</div>;
 	}
 
 	render() {
@@ -40,19 +42,19 @@ class WeatherApp extends React.Component {
 			</div>
 		);
 	}
-}
+};
 
 function mapStateToProps(state, props) {
 	return {
 		weather: state.weather
-	}
+	};
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
 		actions: bindActionCreators(forecastActions, dispatch),
 		dispatch
-	}
+	};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WeatherApp)
+export default connect(mapStateToProps, mapDispatchToProps)(WeatherApp);
