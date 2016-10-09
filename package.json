@@ -2,6 +2,7 @@
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://agubler.github.io/weather",
   "devDependencies": {
     "eslint": "^3.7.1",
     "eslint-config-standard": "^6.2.0",
