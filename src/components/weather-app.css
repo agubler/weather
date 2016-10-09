@@ -1,0 +1,9 @@
+
+.weather {
+	max-width: 125px;
+	margin: auto;
+}
+
+padded-container {
+	padding: 0 25px;
+}
