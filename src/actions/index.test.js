@@ -38,7 +38,7 @@ describe('async actions', () => {
 		];
 		const store = mockStore({ });
 
-		return store.dispatch(actions.getForecast(location))
+		return store.dispatch(actions.fetchForecast(location))
 			.then(() => {
 				expect(store.getActions()).toEqual(expectedActions);
 			});
