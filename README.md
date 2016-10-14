@@ -53,4 +53,4 @@ This will producde a minified, productionised bundle of the application in `buil
 5. consider routing
 6. consider typescript or flow for typings
 
-[word](#### word word word, word word word)
+[word](#word-word-word-word-word-word)
