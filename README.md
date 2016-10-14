@@ -3,7 +3,9 @@
 
 The running application can be found at https://agubler.github.io/weather
 
-####Installation
+#### Installation
+
+#### word word word, word word word
 
 To install all the required depedencies run:
 
@@ -51,3 +53,4 @@ This will producde a minified, productionised bundle of the application in `buil
 5. consider routing
 6. consider typescript or flow for typings
 
+[word](#### word word word, word word word)
